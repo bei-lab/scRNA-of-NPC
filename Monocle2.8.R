@@ -9,10 +9,10 @@ library(parallel)
 library(monocle)
 rm(list = ls())
 
-load("monocle.RData")
+load("Seurat.RData")
 
 #######seurat to monocle######
-monocle_data <- importCDS(monocle_data, import_all = TRUE)
+monocle_data <- importCDS(Seurat_data, import_all = TRUE)
 
 DelayedArray:::set_verbose_block_processing(TRUE)
 options(DelayedArray.block.size=1000e6)
