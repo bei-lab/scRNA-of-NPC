@@ -8,7 +8,6 @@ library(gridExtra)
 library(ggplot2)
 library(dplyr)
 library(parallel)
-library(DoubletFinder)
 rm(list = ls())
 
 #############merge samples###############
