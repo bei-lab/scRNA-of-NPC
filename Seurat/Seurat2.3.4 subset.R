@@ -53,12 +53,12 @@ subset <- FindClusters(subset,dims.use=1:20,
 
 ###########--------dimplot-----------########
 cols <- c(pal_npg()(10),pal_igv()(9),pal_uchicago("light")(9),pal_futurama()(12), pal_lancet()(9))[-8]
-p1 = DimPlot(my,reduction.use="umap",no.legend=F,do.return=T,pt.size=1,cols.use = cols,
+p1 = DimPlot(subset,reduction.use="umap",no.legend=F,do.return=T,pt.size=1,cols.use = cols,
              do.label=T,label.size=6); 
-p2=DimPlot(my,do.label=T,reduction.use="umap",
+p2=DimPlot(subset,do.label=T,reduction.use="umap",
            no.legend=F,pt.size=0.1,do.return=T,
            group.by="Patient")
-p3=DimPlot(my,do.label=T,reduction.use="umap",
+p3=DimPlot(subset,do.label=T,reduction.use="umap",
            no.legend=F,pt.size=0.1,do.return=T,
            group.by="Source")
 png("subset_dimplot.png",width = 720*12, height = 720*10, res = 720);
