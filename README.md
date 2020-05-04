@@ -42,4 +42,4 @@ Download from https://github.com/califano-lab/ARACNe-AP
 
 
 ### Insatll software CellPhoneDB v2.06
-Dowload from https://github.com/Teichlab/cellphonedb
+Download from https://github.com/Teichlab/cellphonedb
