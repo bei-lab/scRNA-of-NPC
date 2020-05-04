@@ -15,7 +15,7 @@ Java version 1.8.0_60
 source("https://z.umn.edu/archived-seurat")	
 
 
-#install R package DoubletFinder V2.0
+#install R package DoubletFinder v2.0
 
 remotes::install_github('chris-mcginnis-ucsf/DoubletFinder')
 
