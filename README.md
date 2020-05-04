@@ -12,7 +12,7 @@ Java version 1.8.0_60
 
 #install R package Seurat v2.3.4 	
 
-source("https://z.umn.edu/archived-seurat")	
+source("https://z.umn.edu/archived-seurat")
 
 
 #install R package DoubletFinder v2.0
