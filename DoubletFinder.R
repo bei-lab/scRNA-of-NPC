@@ -10,9 +10,9 @@ library(DoubletFinder)
 rm(list = ls())
 
 ags <- commandArgs(trailingOnly = T)
-setwd(paste0("/data/home/liuyang/liuyang/RAW_data/1-SingleCell/3-NPC/data/",ags[1]))
+setwd(paste0("/data/home/liuyang/RAW_data/1-SingleCell/3-NPC/data/",ags[1]))
 
-#1. Read in all input expression matrices
+#Read in all input expression matrices
 # Create and setup Seurat objects for each dataset 
 way <- paste0(strsplit(ags[1],"_")[[1]][1],"_",strsplit(ags[1],"_")[[1]][2],"_",strsplit(ags[1],"_")[[1]][3])
 TenXdat1 <- Read10X(data.dir = paste0("/data/home/hanbw/project/Single_cell_1808_NPC/",way,"/",ags[1],"/outs/filtered_gene_bc_matrices/refdata-cellranger-GRCh38_and_EBV_5p"))
