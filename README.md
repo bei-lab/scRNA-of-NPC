@@ -1,5 +1,5 @@
 # scRNA-of-NPC
-Environment & Dependencies	
+Environment & Dependencies
 
 Red Hat Enterprise Linux Server release 6.6	
 
