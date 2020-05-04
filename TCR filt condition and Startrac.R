@@ -5,8 +5,8 @@ library("RColorBrewer")
 library("dplyr")
 
 #############################
-TCR <- read.csv("/data/home/hanbw/project/Single_cell_1808_NPC/NPC_Ten_TCR_BCR_1811/NPC_SC_TEN_combine_TCR/outs/filtered_contig_annotations.csv")
-load("tc.RData")
+TCR <- read.csv("filtered_contig_annotations.csv")
+load("tc.RData") #tc Seurat data
 
 #############------------------transform the barcode of cells---------------###########
 T_cell_meta.data <- tc@meta.data
