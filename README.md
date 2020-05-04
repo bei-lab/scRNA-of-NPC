@@ -15,6 +15,11 @@ Java version 1.8.0_60
 source("https://z.umn.edu/archived-seurat")	
 
 
+#install R package DoubletFinder V2.0
+
+remotes::install_github('chris-mcginnis-ucsf/DoubletFinder')
+
+
 #install R package Monocle v2.8 	
 
 source("http://bioconductor.org/biocLite.R") 
