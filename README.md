@@ -12,22 +12,22 @@ Java version 1.8.0_60
 ## Install software
 ### Install R package Seurat v2.3.4 	
 
-\tsource("https://z.umn.edu/archived-seurat")
+    source("https://z.umn.edu/archived-seurat")
 
 
 
 ### Install R package DoubletFinder v2.0
-\tremotes::install_github('chris-mcginnis-ucsf/DoubletFinder')
+    remotes::install_github('chris-mcginnis-ucsf/DoubletFinder')
 
 
 ### Install R package Monocle v2.8 	
-\tsource("http://bioconductor.org/biocLite.R") 
-\tbiocLite("monocle")	
+    source("http://bioconductor.org/biocLite.R") 
+    biocLite("monocle")	
 
 
 ### Install R package STARTRAC v0.1
-\tinstall.packages("devtools")	
-\tdevtools::install_github("Japrin/STARTRAC")	
+    install.packages("devtools")	
+    devtools::install_github("Japrin/STARTRAC")	
 
 
 ### Install software GSEA v3.0	
