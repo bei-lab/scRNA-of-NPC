@@ -11,7 +11,6 @@ Java version 1.8.0_60
 
 ## Install software
 ### Install R package Seurat v2.3.4 	
-
     source("https://z.umn.edu/archived-seurat")
 
 
@@ -31,20 +30,16 @@ Java version 1.8.0_60
 
 
 ### Install software GSEA v3.0	
-
-download from https://www.gsea-msigdb.org/gsea/downloads.jsp	
+Download from https://www.gsea-msigdb.org/gsea/downloads.jsp	
 
 
 ### Online software Metascape	
-
 https://metascape.org/gp/index.html	
 
 
 ### Insatll software ARACNe-AP 
-
-download from https://github.com/califano-lab/ARACNe-AP
+Download from https://github.com/califano-lab/ARACNe-AP
 
 
 ### Insatll software CellPhoneDB v2.06
-
-dowload from https://github.com/Teichlab/cellphonedb
+Dowload from https://github.com/Teichlab/cellphonedb
