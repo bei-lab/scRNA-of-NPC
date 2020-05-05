@@ -1,5 +1,5 @@
 
-#######################################Seurat 2.3.4 subsetdata#######################
+#########-----------------Seurat 2.3.4 -------------------#########
 library(Seurat)
 library(Matrix)
 library(stringr)
@@ -10,7 +10,7 @@ library(dplyr)
 library(parallel)
 rm(list = ls())
 
-#############merge samples###############
+####--------merge samples--------#########
 list_name = c("NPC_SC_1802_PBMC_cDNA",
               "NPC_SC_1802_Tumor_cDNA",
               "NPC_SC_1805_PBMC_cDNA",
@@ -39,11 +39,11 @@ for (i in list_name){
   slist <- append(slist,i)
 } 
 
-################rm doublet###############
+#######---------rm doublet----------######
 for (i in 1:20){
   slist[[i]] <- SubsetData(object = slist[[i]], cells.use = rownames(slist[[i]]@meta.data[slist[[i]]@meta.data$DF == "Singlet",]))
 }
-###############rename cell names##########
+####----------rename cell names-------####
 sa <- slist[[1]]
 sb <- slist[[2]]
 sc <- slist[[3]]
@@ -100,16 +100,16 @@ v16=head(rownames(sp@hvg.info), 3000),v17=head(rownames(sq@hvg.info), 3000),
 v18=head(rownames(sr@hvg.info), 3000),v19=head(rownames(ss@hvg.info), 3000),
 v20=head(rownames(st@hvg.info), 3000)));
 
-##################Run CCA###########
+#######-------Run CCA-------####
 alist <- list(sa,sb,sc,sd,se,sf,sg,sh,si,sj,sk,sl,sm,sn,so,sp,sq,sr,ss,st)
 npc <- RunMultiCCA(object.list=alist, genes.use=com_3000, num.cc=70)
 
-#################Plot###############
+######--------Plot---------#####
 p1 <- DimPlot(npc, reduction.use="cca", group.by="Patient", pt.size=0.5, do.return=T)
 p2 <- VlnPlot(npc, features.plot="CC1", group.by="Patient", do.return=TRUE)
 p3 <- MetageneBicorPlot(npc, grouping.var="Patient", dims.eval=1:70); dev.off()
 
-#########Standardized processes#########
+###------Standardized processes------####
 npc <- AlignSubspace(npc,reduction.type="cca",grouping.var="Patient",dims.align=1:20)
 npc <- RunUMAP(npc,reduction.use="cca.aligned",n_neighbors=5L,dims.use=1:20,min_dist=0.1)
 npc <- FindClusters(npc,reduction.type="cca.aligned",resolution=1,dims.use=1:20)
