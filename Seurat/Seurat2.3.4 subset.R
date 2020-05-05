@@ -10,7 +10,6 @@ library(ggsci)
 ###########---------load data--------############
 load("subset.RData")
 
-
 #####----------find variable gene--------------###
 subset <- FindVariableGenes(subset,
                         x.low.cutoff=0.15,
@@ -32,7 +31,6 @@ subset@var.genes <- com; length(subset@var.genes)
 png("subset_MetageneBicorPlot.png",width = 720*12, height = 720*10, res = 720);
 MetageneBicorPlot(subset, grouping.var="Patient", dims.eval=1:30);
 dev.off()
-
 
 #scale
 subset <- AlignSubspace(subset,reduction.type="cca",
